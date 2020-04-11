@@ -22,7 +22,7 @@ Howard's Peeler is a dedicated web scraper with built in logging and notificatio
 3. Notification<br>
     1. "Scream" on a hit (espeak)<br>
 4. Logging<br>
-    1. Basic (screen or file)<br>
+    1. ~~Basic (screen or file)~~<br>
     2. Categories<br>
     3. Format (`YYYYMMDD-HH:MM:SS HOPE Log message goes here`)<br>
 5. Miscellaneous<br>
