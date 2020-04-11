@@ -24,9 +24,6 @@ def log_a_string(message, category=Log_Cats.INFO):
             message - Non-empty string to log
             category - Log_Cats name
     """
-    # LOCAL VARIABLES
-    formatted_message = ''
-
     # INPUT VALIDATION
     # message
     if not isinstance(message, str):
@@ -38,12 +35,16 @@ def log_a_string(message, category=Log_Cats.INFO):
         raise TypeError('The category parameter must be a Log_Cats name instead of '
                         f'{type(category)}')
 
+    # LOCAL VARIABLES
+    formatted_message = ''
+    stripped_message = strip_newlines(message)
+
     # LOG IT
     # Format it
     formatted_message += get_datestamp() + ' '
     formatted_message += get_timestamp() + ' '
     formatted_message += '[' + category.name + '] '
-    formatted_message += message
+    formatted_message += stripped_message
     # Log it
     print(formatted_message, file=sys.stdout)
 
@@ -62,3 +63,26 @@ def get_timestamp():
         RETURN - String representation of the current time in HH:MM:SS
     """
     return '{:%H:%M:%S}'.format(datetime.datetime.now())
+
+
+def strip_newlines(string_to_strip):
+    """
+        PURPOSE - Strip all newline characters from a string
+        PARAMETERS
+            string_to_strip - String, empty or otherwise, from which to strip newlines
+        RETURN - string_to_strip with all newlines removed
+    """
+    # INPUT VALIDATION
+
+    # LOCAL VARIABLES
+    strings_to_replace = ['\n', '\r\n']
+    stripped_string = string_to_strip
+    new_char = ' '  # Replace with this character
+
+    # STRIP IT
+    for string_to_replace in strings_to_replace:
+        stripped_string = stripped_string.replace(string_to_replace,
+                                                  new_char * len(string_to_replace))
+
+    # DONE
+    return stripped_string
