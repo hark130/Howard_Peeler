@@ -25,9 +25,9 @@ Howard's Peeler is a dedicated web scraper with built in logging and notificatio
     6. [blink(1)](https://blink1.thingm.com/)<br>
 3. Notification<br>
     1. "Scream" on a hit (espeak)<br>
-4. Logging<br>
+4. ~~Logging~~<br>
     1. ~~Basic (screen or file)~~<br>
-    2. Categories<br>
+    2. ~~Categories~~<br>
     3. ~~Datetime stamp (`YYYY-MM-DD HH:MM:SS HOPE Log message goes here`)~~<br>
 5. Miscellaneous<br>
     1. Obfuscated URL<br>
