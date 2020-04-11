@@ -8,8 +8,8 @@ Howard's Peeler is a dedicated web scraper with built in logging and notificatio
     2. Download the HTML page<br>
     3. Parse the HTML<br>
     4. Determine availability<br>
-        1.   button<br>
-        2.  time<br>
+        1. button<br>
+        2. time<br>
         3. location chooser<br>
     5. Add something to cart (necessary?)<br>
 2. Configuration<br>
