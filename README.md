@@ -30,7 +30,7 @@ Howard's Peeler is a dedicated web scraper with built in logging and notificatio
     2. ~~Categories~~<br>
     3. ~~Datetime stamp (`YYYY-MM-DD HH:MM:SS HOPE Log message goes here`)~~<br>
 5. Miscellaneous<br>
-    1. Obfuscated URL<br>
+    1. ~~Obfuscated URL~~<br>
     2. Interrupt key/exit code<br>
 
 NOTE: Branch names are based on the feature-task identifiers
