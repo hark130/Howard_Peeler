@@ -24,7 +24,7 @@ Howard's Peeler is a dedicated web scraper with built in logging and notificatio
 4. Logging<br>
     1. Basic (screen or file)<br>
     2. Categories<br>
-    3. Format (YYYYMMDD-HH:MM:SS HOPE <msg>)<br>
+    3. Format (`YYYYMMDD-HH:MM:SS HOPE Log message goes here`)<br>
 5. Miscellaneous<br>
     1. Obfuscated URL<br>
     2. Interrupt key/exit code<br>
