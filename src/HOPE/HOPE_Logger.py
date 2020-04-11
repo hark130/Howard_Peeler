@@ -5,15 +5,16 @@ import sys
 # Third Party Imports
 # Local Imports
 
+
 class Log_Cats(Enum):
-    EMERG=1   # System is unusable
-    ALERT=2   # Action must be taken immediately
-    CRIT=3    # Critical conditions
-    ERR=4     # Error conditions
-    WARN=5    # Warning conditions
-    NOTICE=6  # Normal, but significant, condition
-    INFO=7    # Informational message
-    DEBUG=8   # Debug-level message
+    EMERG = 1   # System is unusable
+    ALERT = 2   # Action must be taken immediately
+    CRIT = 3    # Critical conditions
+    ERR = 4     # Error conditions
+    WARN = 5    # Warning conditions
+    NOTICE = 6  # Normal, but significant, condition
+    INFO = 7    # Informational message
+    DEBUG = 8   # Debug-level message
 
 
 def log_a_string(message, category=Log_Cats.INFO):
