@@ -5,6 +5,8 @@ import sys
 # Third Party Imports
 # Local Imports
 
+__DEBUG__ = True
+
 
 class Log_Cats(Enum):
     EMERG = 1   # System is unusable
@@ -38,15 +40,23 @@ def log_a_string(message, category=Log_Cats.INFO):
     # LOCAL VARIABLES
     formatted_message = ''
     stripped_message = strip_newlines(message)
+    print_it = False
 
-    # LOG IT
-    # Format it
-    formatted_message += get_datestamp() + ' '
-    formatted_message += get_timestamp() + ' '
-    formatted_message += '[' + category.name + '] '
-    formatted_message += stripped_message
-    # Log it
-    print(formatted_message, file=sys.stdout)
+    # CHECK DEBUGGING
+    if __DEBUG__:
+        print_it = True
+    elif category.name != Log_Cats.DEBUG.name:
+        print_it = True
+
+    if print_it:
+        # LOG IT
+        # Format it
+        formatted_message += get_datestamp() + ' '
+        formatted_message += get_timestamp() + ' '
+        formatted_message += '[' + category.name + '] '
+        formatted_message += stripped_message
+        # Log it
+        print(formatted_message, file=sys.stdout)
 
 
 def get_datestamp():
