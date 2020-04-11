@@ -30,3 +30,9 @@ Howard's Peeler is a dedicated web scraper with built in logging and notificatio
     2. Interrupt key/exit code<br>
 
 NOTE: Branch names are based on the feature-task identifiers
+
+## CODE REVIEWS
+
+From the Howard_Peeler directory:
+
+* `pycodestyle --max-line-length=100 .`
