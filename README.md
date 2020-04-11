@@ -1,6 +1,10 @@
 # Howard_Peeler
 Howard's Peeler is a dedicated web scraper with built in logging and notification.  It was written in Python 3.6.9 and works best in Linux.
 
+## USAGE
+
+`python3 src/HOPE/`
+
 ## FEATURES
 
 1. HTML<br>
@@ -24,7 +28,7 @@ Howard's Peeler is a dedicated web scraper with built in logging and notificatio
 4. Logging<br>
     1. ~~Basic (screen or file)~~<br>
     2. Categories<br>
-    3. Format (`YYYYMMDD-HH:MM:SS HOPE Log message goes here`)<br>
+    3. ~~Datetime stamp (`YYYY-MM-DD HH:MM:SS HOPE Log message goes here`)~~<br>
 5. Miscellaneous<br>
     1. Obfuscated URL<br>
     2. Interrupt key/exit code<br>
