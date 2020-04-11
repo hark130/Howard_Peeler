@@ -1,5 +1,9 @@
+from HOPE_Logger import log_a_string
+
+
 def main():
-    print("HOPE")
+    log_a_string("\nHOPE Start")
+    log_a_string("HOPE Stop\n")
 
 
 if __name__ == "__main__":
