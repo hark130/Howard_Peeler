@@ -21,6 +21,7 @@ def log_a_string(message, category=Log_Cats.INFO):
         PURPOSE - Log a string to the console
         PARAMETERS
             message - Non-empty string to log
+            category - Log_Cats name
     """
     # LOCAL VARIABLES
     formatted_message = ''
