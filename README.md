@@ -32,6 +32,9 @@ Howard's Peeler is a dedicated web scraper with built in logging and notificatio
 5. Miscellaneous<br>
     1. ~~Obfuscated URL~~<br>
     2. Interrupt key/exit code<br>
+6. Mulithreading<br>
+    1. Write a module<br>
+    2. Implement the "scream" in it's own thread<br>
 
 NOTE: Branch names are based on the feature-task identifiers
 
