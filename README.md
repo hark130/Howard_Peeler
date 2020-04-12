@@ -24,7 +24,10 @@ Howard's Peeler is a dedicated web scraper with built in logging and notificatio
     5. Scream duration (number of screams or time duration)<br>
     6. [blink(1)](https://blink1.thingm.com/)<br>
 3. Notification<br>
-    1. "Scream" on a hit (espeak)<br>
+    1. ~~"Scream" on a hit (espeak)~~<br>
+    2. Implement repeating "Scream"<br>
+    3. Multithread the repeating "Scream"<br>
+    4. Add espeak alternative<br>
 4. ~~Logging~~<br>
     1. ~~Basic (screen or file)~~<br>
     2. ~~Categories~~<br>
@@ -43,3 +46,4 @@ NOTE: Branch names are based on the feature-task identifiers
 From the Howard_Peeler directory:
 
 * `pycodestyle --max-line-length=100 .`
+* Change `HOPE_Logger.__DEBUG__` to `False` before merging into master
