@@ -3,6 +3,7 @@
 # Local Imports
 from HOPE_Logger import log_a_string, Log_Cats
 from HOPE_Obfuscation import obfuscate_string
+from HOPE_Subprocess import execute_command
 
 
 def main():
@@ -13,6 +14,12 @@ def main():
     mask = 'Howard_Peeler'
     obfuscated_URL = ' \x1b\x03\x11\x01^p\x7f\x12\x12\x1bK\x1a-\rY\x02\x1d\tp'
     clear_text_URL = ''
+
+    # TEST
+    try:
+        log_a_string(execute_command(['espeak', '--version']), Log_Cats.DEBUG)
+    except RuntimeError as err:
+        log_a_string(repr(err), Log_Cats.DEBUG)
 
     # DEOBFUSCATE URL
     clear_text_URL = obfuscate_string(obfuscated_URL, mask)
