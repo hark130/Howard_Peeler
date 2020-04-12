@@ -45,4 +45,4 @@ NOTE: Branch names are based on the feature-task identifiers
 From the Howard_Peeler directory:
 
 * `pycodestyle --max-line-length=100 .`
-* Change `HOPE_Logger.__DEBUG__` to `False`
+* Change `HOPE_Logger.__DEBUG__` to `False` before merging into master
