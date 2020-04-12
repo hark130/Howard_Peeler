@@ -2,7 +2,6 @@ from HOPE_Logger import log_a_string, Log_Cats
 from HOPE_Subprocess import execute_command
 
 
-
 def verify_espeak():
     """
         PURPOSE - Verify espeak is installed
@@ -62,7 +61,6 @@ class Espeak_Config:
         if self._wpms is not None and not isinstance(self._wpms, str):
             raise ValueError('The wpms parameter was invalid')
 
-
     def _validate_words(self, words):
         # VALIDATION
         if not isinstance(words, str):
@@ -70,7 +68,6 @@ class Espeak_Config:
                             f'{type(words)}')
         elif not words:
             raise ValueError('The words parameter may not be empty')
-
 
     def speak(self, words):
         # VALIDATION
@@ -84,7 +81,6 @@ class Espeak_Config:
 
         # EXECUTE COMMAND LIST
         execute_command(command_list)
-
 
     def create_command_list(self, words):
         """
