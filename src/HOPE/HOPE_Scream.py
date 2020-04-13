@@ -51,15 +51,15 @@ def verify_tput():
     return installed
 
 
-"""
-    PURPOSE - Make a sound.  Hopefully, speech.  Otherwise, some beeps.
-    NOTES
-        - This class implements the following methods, in order, to alert the caller:
-            1. HOPE_Scream.speak(message) --> espeak message
-            2. HOPE_Scream.speak(message) --> tput bel
-            3. HOPE_Scream.speak(message) --> [DEBUG] message
-"""
 class HOPE_Scream:
+    """
+        PURPOSE - Make a sound.  Hopefully, speech.  Otherwise, some beeps.
+        NOTES
+            - This class implements the following methods, in order, to alert the caller:
+                1. HOPE_Scream.speak(message) --> espeak message
+                2. HOPE_Scream.speak(message) --> tput bel
+                3. HOPE_Scream.speak(message) --> [DEBUG] message
+    """
 
     def __init__(self):
         # ATTRIBUTES
@@ -127,7 +127,7 @@ class HOPE_Scream:
 
         # EXECUTE COMMAND LIST
         for _ in range(len(words.split())):
-            log_a_string(f'HOPE_Scream is executing {repr(command_list)}', Log_Cats.DEBUG)  # DEBUGGING
+            log_a_string(f'HOPE_Scream is executing {repr(command_list)}', Log_Cats.DEBUG)
             subprocess.run(command_list)
             time.sleep(.5)
 

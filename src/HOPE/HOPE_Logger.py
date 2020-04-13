@@ -42,7 +42,7 @@ def log_a_string(message, category=Log_Cats.INFO):
     stripped_message = strip_newlines(message)
     print_it = False
 
-    # CHECK DEBUGGING
+    # CHECK DEBUG STATUS
     if __DEBUG__:
         print_it = True
     elif category.name != Log_Cats.DEBUG.name:

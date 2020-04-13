@@ -33,7 +33,7 @@ def execute_command(cmd_list):
     stderr_output = ''  # Store stderr here
 
     # EXECUTE
-    log_a_string(f'HOPE_Subprocess is executing {repr(cmd_list)}', Log_Cats.DEBUG)  # DEBUGGING
+    log_a_string(f'HOPE_Subprocess is executing {repr(cmd_list)}', Log_Cats.DEBUG)
     proc_obj = subprocess.Popen(cmd_list, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     (stdout_output, stderr_output) = proc_obj.communicate(timeout=15)
     if stderr_output:
