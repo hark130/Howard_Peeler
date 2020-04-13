@@ -26,7 +26,6 @@ def verify_espeak():
         log_a_string(version_output, Log_Cats.DEBUG)
 
     # DONE
-    return False  # FUNCTIONAL TESTING
     return installed
 
 
@@ -49,7 +48,6 @@ def verify_tput():
         log_a_string(command_output, Log_Cats.DEBUG)
 
     # DONE
-    # return False  # FUNCTIONAL TESTING
     return installed
 
 
@@ -131,7 +129,7 @@ class HOPE_Scream:
         for _ in range(len(words.split())):
             log_a_string(f'HOPE_Scream is executing {repr(command_list)}', Log_Cats.DEBUG)  # DEBUGGING
             subprocess.run(command_list)
-            time.sleep(.1)
+            time.sleep(.5)
 
 
 class Espeak_Config:
