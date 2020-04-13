@@ -27,7 +27,7 @@ Howard's Peeler is a dedicated web scraper with built in logging and notificatio
     1. ~~"Scream" on a hit (espeak)~~<br>
     2. Implement repeating "Scream"<br>
     3. Multithread the repeating "Scream"<br>
-    4. Add espeak alternative<br>
+    4. ~~Add espeak alternative~~<br>
 4. ~~Logging~~<br>
     1. ~~Basic (screen or file)~~<br>
     2. ~~Categories~~<br>
