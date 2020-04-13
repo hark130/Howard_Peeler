@@ -1,4 +1,8 @@
+# Standard Imports
 import subprocess
+import time
+# Third Party Imports
+# Local Imports
 from HOPE_Logger import log_a_string, Log_Cats
 from HOPE_Subprocess import execute_command
 
@@ -121,24 +125,13 @@ class HOPE_Scream:
         # LOCAL VARIABLES
         default_command_list = ['tput']
         bell_string = 'bel'
-        command_list = []
-
-        # CONSTRUCT COMMAND LIST
-        # Count words
-
-        # Build command list
         command_list = default_command_list + [bell_string]
 
         # EXECUTE COMMAND LIST
-        # execute_command(command_list)
-        log_a_string(f'HOPE_Scream is executing {repr(command_list)}', Log_Cats.DEBUG)  # DEBUGGING
-        # subprocess.run(command_list, stdout=subprocess.PIPE, stderr=subprocess.PIPE)  # DEBUGGING
-        # subprocess.run(command_list, stderr=subprocess.PIPE)  # DEBUGGING
-        subprocess.run(command_list)  # DEBUGGING
-        # subprocess.run(['sleep', '1'])  # DEBUGGING
-        # subprocess.run(command_list)  # DEBUGGING
-        # subprocess.run(command_list, stderr=subprocess.DEVNULL)  # DEBUGGING
-        # subprocess.run(command_list, shell=True)  # DEBUGGING
+        for _ in range(len(words.split())):
+            log_a_string(f'HOPE_Scream is executing {repr(command_list)}', Log_Cats.DEBUG)  # DEBUGGING
+            subprocess.run(command_list)
+            time.sleep(.1)
 
 
 class Espeak_Config:
