@@ -3,7 +3,7 @@
 # Local Imports
 from HOPE_Logger import log_a_string, Log_Cats
 from HOPE_Obfuscation import obfuscate_string
-from HOPE_Scream import verify_espeak, Espeak_Config
+from HOPE_Scream import verify_espeak, HOPE_Scream
 from HOPE_Subprocess import execute_command
 
 
@@ -18,17 +18,13 @@ def main():
     espeak_obj = None
     espeak_cmd_list = []
 
-    # TEST
-    # espeak
-    verify_espeak()
-
     # DEOBFUSCATE URL
     clear_text_URL = obfuscate_string(obfuscated_URL, mask)
     log_a_string('De-obfuscated: ' + clear_text_URL, Log_Cats.INFO)
 
     # ESPEAK
-    espeak_obj = Espeak_Config()
-    espeak_obj.speak('This is a TEST')
+    scream_obj = HOPE_Scream()
+    scream_obj.speak('This is a TEST')
 
     # DONE
     log_a_string('HOPE Stop', Log_Cats.INFO)
