@@ -109,7 +109,7 @@ class HOPE_Scraper:
         else:
             content_type = content_type[content_type.find('charset'):]
             temp_char_set = content_type[content_type.find('=') + 1:]
-            temp_char_set = temp_char_set.replace(' ','')
+            temp_char_set = temp_char_set.replace(' ', '')
             self._char_set = temp_char_set
         # print(self._char_set)  # DEBUGGING
 
