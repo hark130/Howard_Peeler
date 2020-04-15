@@ -54,6 +54,7 @@ def main():
     # URL
     scraper_obj = HOPE_Scraper(clear_text_URL)
     scraper_obj.do_it()
+    print(scraper_obj.get_html_string())
 
     # DONE
     log_a_string('HOPE Stop', Log_Cats.INFO)
