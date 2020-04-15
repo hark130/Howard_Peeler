@@ -73,8 +73,6 @@ class HOPE_Scraper:
         # Send request
         log_a_string(f'Sending request to {self._url}', Log_Cats.DEBUG)
         self._request = Request(self._url, headers=defined_headers)
-        # print(self._request)  # DEBUGGING
-        # print(self._request.headers)  # DEBUGGING
         # Check request
         if not self._request:
             raise RuntimeError('Request failed to return an object without raising an Exception')
@@ -85,9 +83,6 @@ class HOPE_Scraper:
         # Check request
         if not self._response:
             raise RuntimeError('urlopen failed to return a response without raising an Exception')
-        # print(self._response)  # DEBUGGING
-        # print(self._response.headers)  # DEBUGGING
-        # print(dir(self._response))  # DEBUGGING
 
     def _determine_charset(self):
         """
@@ -98,12 +93,10 @@ class HOPE_Scraper:
         """
         # LOCAL VARIABLES
         temp_char_set = None
-        # print(self._response.headers)  # DEBUGGING
         content_type = self._response.getheader('Content-Type')
 
         # DETERMINE CHARSET OF PAGE
         log_a_string(f'Determining character set of {self._url}', Log_Cats.DEBUG)
-        # print(content_type)  # DEBUGGING
         if content_type.find('=') < 0 or content_type.find('charset') < 0:
             self._char_set = 'UTF-8'
         else:
@@ -111,7 +104,6 @@ class HOPE_Scraper:
             temp_char_set = content_type[content_type.find('=') + 1:]
             temp_char_set = temp_char_set.replace(' ', '')
             self._char_set = temp_char_set
-        # print(self._char_set)  # DEBUGGING
 
     def _read_response_content(self):
         log_a_string(f'Reading content of {self._url}', Log_Cats.DEBUG)
@@ -119,9 +111,7 @@ class HOPE_Scraper:
         # Check content
         if not self._content_bytes:
             raise RuntimeError(f'Failed to read byte content from {self._url}')
-        # print(self._content_bytes)  # DEBUGGING
 
     def _decode_response_content(self):
         log_a_string(f'Decoding content as the {self._char_set} character set', Log_Cats.DEBUG)
         self._content_string = self._content_bytes.decode(self._char_set)
-        # print(self._content_string)  # DEBUGGING
