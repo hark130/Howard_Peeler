@@ -41,6 +41,12 @@ Howard's Peeler is a dedicated web scraper with built in logging and notificatio
 
 NOTE: Branch names are based on the feature-task identifiers
 
+## NOTES
+
+* [Extracting Data from HTML with BeautifulSoup](https://www.pluralsight.com/guides/extracting-data-html-beautifulsoup)
+* [Selenium WebDriver](https://selenium-python.readthedocs.io/navigating.html)
+* [Replicating Javascript requests](https://stackoverflow.com/questions/26393231/using-python-requests-with-javascript-pages/26393257#26393257)
+
 ## CODE REVIEWS
 
 From the Howard_Peeler directory:
