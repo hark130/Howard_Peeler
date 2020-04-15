@@ -40,6 +40,12 @@ class HOPE_Scraper:
         # Decode response content
         self._decode_response_content()
 
+    def get_html_string(self):
+        return self._content_string
+
+    def get_html_bytes(self):
+        return self._content_bytes
+
     def _validate_attributes(self):
         # INPUT VALIDATION
         # self._url
